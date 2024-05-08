@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+</head>
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+        <div id="container"></div>
+
+    <script>
+        const container = document.querySelector("#container");
+
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = "This is the glorious text-content!";
+
+        container.appendChild(content);
+
+        const par = document.createElement("p");
+        par.textContent = "Hey I'm red!";
+        par.style.color = "Red";
+        content.appendChild(par);
+
+        const heading3 = document.createElement("h3");
+        heading3.textContent = "I'm a blue H3!";
+        heading3.style.color = "blue";
+        container.appendChild(heading3);
+
+        const body = document.querySelector("body");
+
+        const container2 = document.createElement("div");
+        container2.classList.add("container");
+        container2.style.width = "400px";
+        container2.style.height = "400px";
+        container2.style.backgroundColor = "pink";
+        container2.style.border = "5px solid black";
+        body.appendChild(container2);
+
+        const heading1 = document.createElement("h1");
+        heading1.textContent = "I'm in a div";
+        container2.appendChild(heading1);
+
+        const par2 = document.createElement("p");
+        par2.textContent = "ME TOO!";
+        container2.appendChild(par2);
+    </script>
+</body>
+</html>
